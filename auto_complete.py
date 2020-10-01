@@ -117,4 +117,48 @@ def auto_complete():
 if __name__ == '__main__':
     auto_complete()
 
+    {
+        int
+    left = 0;
+    int
+    right = size - 1;
+    int
+    min_index = 0;
+    int
+    max_index = size - 1;
+
+    while (left < max_index | | right > min_index)
+        {
+        if (prices[left] < prices[min_index])
+        {
+            min_index = left;
+        }
+
+        if (prices[right] > prices[max_index])
+        {
+        max_index = right;
+        }
+
+        if (left < max_index)
+        {
+        ++left;
+        }
+
+        if (right > min_index)
+        {
+        --right;
+        }
+        }
+        printf("The max profit: %d\n", prices[max_index] - prices[min_index]);
+    }
+
+    int
+    main()
+    {
+    int
+    arr[] = {5, 2, 13, 1, 999, 7, 1008, 25};
+    getMaxInvestment(arr, 8);
+    return 1;
+}
+
 
